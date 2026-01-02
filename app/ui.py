@@ -1,1 +1,1 @@
-# UI for the agent using ChainLit framework.
+# UI for the agent using ChainLit framework to make a chat window.
