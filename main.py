@@ -9,11 +9,10 @@ def run_api():
 
 def run_ui():
     # Runs the Chainlit interface
-    # Note: Chainlit usually needs the 'chainlit run' command
     subprocess.run(["chainlit", "run", "app/ui.py", "--port", "8000"])
 
 if __name__ == "__main__":
-    print("🚀 Starting Admissions Strategist System...")
+    print("Starting Admissions Strategist System...")
     
     # Create processes for both
     api_process = multiprocessing.Process(target=run_api)

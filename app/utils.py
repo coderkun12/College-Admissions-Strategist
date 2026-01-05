@@ -12,8 +12,6 @@ Defining a LLM and a API which will help the UI to have a file name based on the
 LLM is tasked only to extract the university name and program name and return it as a JSON output to the ui.py file.
 """
 
-
-
 llm = ChatGroq(model="llama-3.1-8b-instant",
                temperature=0,
                groq_api_key=os.getenv("GROQ_API_KEY"))
