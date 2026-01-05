@@ -1,4 +1,4 @@
-# 🎓 College Admissions Strategist
+# 🎓 Agentic Admissions Counsellor
 
 ### An Autonomous Multi-Agent AI System for Elite College Consulting
 
