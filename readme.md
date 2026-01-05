@@ -24,17 +24,17 @@ This project utilizes a **Collaborative Agentic Loop**:
 
 ## 🛠️ Tech Stack
 
-- **Core Framework:** [CrewAI / LangChain] _(Specify your choice)_
-- **LLM:** OpenAI GPT-4o / Claude 3.5 Sonnet
-- **Memory:** Vector Embeddings for storing university data
-- **Frontend:** [Streamlit / React] _(If applicable)_
+- **Core Framework:** LangGraph, FAST API.
+- **LLM:** llama-3.1-8b-instant, llama-3.3-70b-versatile
+- **Scraping and search tools:** crawl4ai, serper
+- **Frontend:** chainlit
 
 ## 📥 Getting Started
 
 ### Prerequisites
 
 - Python 3.10+
-- API Keys: OpenAI, Serper (for web search)
+- API Keys: GROQ, Serper (for web search)
 
 ### Installation
 
@@ -55,5 +55,15 @@ This project utilizes a **Collaborative Agentic Loop**:
    python main.py
    ```
 
-🤝 **Contributing**
+## How Project works
+
+1.  User is prompted to enter university name, program name, level of study and background of user.
+2.  After user enters the information, /run-agent makes a llm call to the llm defined in utils.py to extract the data in JSON format.
+3.  After the data is extracted in JSON format, filename is created as: CourseName-ProgramName.docx.
+4.  After step 3, the agentic framework is initiated to perform search program details user seeks and a strategy user can pursue.
+    It works as follows: Manager (determines steps to take) -> Scraper (searches for top sources and scrapes their data) -> Strategist (Prepares the strategy and documentation for the user).
+5.  After documentation text is returned, a word file is created with strategy and course details for the user. User is provided a file to download in the chat.
+
+## 🤝 Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request for any feature enhancements.
