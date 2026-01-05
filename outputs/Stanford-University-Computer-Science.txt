@@ -1,23 +1,46 @@
-Based on the provided information, I'll assess the user's background against the requirements for the Master's program in Computer Science at Stanford University.
+**Stanford University Master's in Computer Science Program Profile and Strategic Evaluation**
+====================================================================================
 
-**Match Score: Medium**
+### PROGRAM OVERVIEW
 
-The user has a strong academic background, with a high CGPA from a reputable institution like IIT Delhi. However, the competition for Stanford University's Master's program in Computer Science is extremely high, and the admissions committee considers a holistic set of factors beyond just academic performance.
+* **Official Deadlines:**
+	+ Early Deadline: December 1
+	+ Regular Deadline: January 5
+	+ International Deadline: January 5 (Note: International students are encouraged to apply by the early deadline to ensure timely processing of visa documents)
+* **Standardized Tests:**
+	+ GRE: Required (average scores: 170-180 Verbal, 170-180 Quantitative)
+	+ TOEFL: Required for international students (minimum score: 100)
+	+ GMAT: Not required
+* **Minimum GPA Expectations:**
+	+ 3.5/4.0 or higher (Stanford is highly competitive, and a strong academic record is expected)
+* **Core Prerequisite Courses:**
+	+ Data Structures
+	+ Algorithms
+	+ Computer Systems
+	+ Theory of Computation
+	+ Programming languages (e.g., Java, C++, Python)
 
-**Specific gaps in the user's profile:**
+### ADMISSIONS STRATEGY
 
-1. **Lack of information on research experience**: Stanford University is known for its research-oriented programs. The user's profile does not mention any research experience, internships, or projects that demonstrate their ability to contribute to the academic community.
-2. **No mention of standardized test scores**: Stanford University requires GRE scores for international students. The user's profile does not mention their GRE scores, which could be a crucial factor in the admissions process.
-3. **No information on extracurricular activities or leadership experience**: The admissions committee looks for well-rounded candidates who have demonstrated leadership skills, community involvement, or entrepreneurial spirit. The user's profile does not highlight any such experiences.
-4. **No clear indication of career goals or motivation**: The user's profile does not provide a clear statement of purpose, career goals, or motivation for pursuing a Master's degree in Computer Science at Stanford University.
+* **Profile Evaluation:**
+	+ The user's CGPA of 9.7/10 from Delhi University is highly competitive and meets the minimum GPA expectations.
+	+ The user's background in Computer Science from a reputable university in India is a strong foundation for the Master's program.
+	+ However, the admissions committee will also consider other factors such as research experience, work experience, and projects.
+* **Strategic Gaps:**
+	+ Research Experience: The user may benefit from participating in research projects or internships to demonstrate their ability to apply theoretical concepts to real-world problems.
+	+ Work Experience: While not required, having some work experience in the field can be beneficial in demonstrating practical skills and industry knowledge.
+	+ Projects: The user should highlight any personal projects or contributions to open-source projects that demonstrate their programming skills and interests.
+* **Actionable Roadmap (Next 6 months):**
+	1. **Month 1-2:**
+		- Prepare for and take the GRE (aim for scores: 170-180 Verbal, 170-180 Quantitative)
+		- Take the TOEFL (aim for a score: 100 or higher)
+		- Research and finalize the list of recommenders for the application
+	2. **Month 3-4:**
+		- Participate in research projects or internships to gain practical experience
+		- Contribute to open-source projects or develop personal projects to demonstrate programming skills
+		- Draft and finalize the statement of purpose and personal statement
+	3. **Month 5-6:**
+		- Finalize the application and submit it by the early deadline (December 1)
+		- Ensure all required documents, including transcripts and letters of recommendation, are submitted on time
 
-**Actionable tips to improve their chances:**
-
-1. **Gain research experience**: Participate in research projects, internships, or collaborations with faculty members at IIT Delhi or other institutions to demonstrate research skills and potential.
-2. **Prepare for and take the GRE**: Ensure that the GRE scores are competitive (typically above 330) to strengthen the application.
-3. **Highlight extracurricular activities and leadership experience**: Emphasize any relevant extracurricular activities, leadership roles, or community involvement that demonstrate a well-rounded personality.
-4. **Craft a strong statement of purpose**: Develop a clear and compelling statement of purpose that outlines career goals, motivation for pursuing a Master's degree, and reasons for choosing Stanford University's Computer Science program.
-5. **Secure strong letters of recommendation**: Identify academic or professional mentors who can provide strong letters of recommendation that highlight the user's academic and professional strengths.
-6. **Ensure a strong overall application package**: Review and refine the application to ensure that all components, including the resume, transcripts, and test scores, are accurate, complete, and showcase the user's strengths.
-
-By addressing these gaps and following the actionable tips, the user can improve their chances of a successful application to the Master's program in Computer Science at Stanford University.
+By following this roadmap, the user can strengthen their application and increase their chances of being accepted into the Stanford University Master's in Computer Science program.

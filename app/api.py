@@ -8,6 +8,7 @@ from app.utils import agent_app
 import uvicorn
 from app.schemas import ChatRequest, ResearchRequest
 from agents.graph import agent_app2
+from tools.doc_generator import create_admission_report
 
 app = FastAPI(title="CollegeInfoBot API")
 
@@ -46,7 +47,7 @@ async def start_research(request: ResearchRequest):
         "program": request.program,
         "level": request.level,
         "user_input": request.background, # Their profile info
-        "status": "research_starting",
+        "status": "researching",
         "university_data": "" # To be filled by scrapper.
     }
     try:
