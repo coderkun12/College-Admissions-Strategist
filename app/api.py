@@ -1,12 +1,9 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 from app.utils import agent_app
 import uvicorn
+from app.schemas import ChatRequest, ResearchRequest
 
 app = FastAPI(title="CollegeInfoBot API")
-
-class ChatRequest(BaseModel):
-    message: str
 
 @app.post("/run-agent")
 async def run_agent(request: ChatRequest):
@@ -31,6 +28,26 @@ async def run_agent(request: ChatRequest):
         # This will print the error to your terminal so you can see it
         print(f"ERROR: {str(e)}") 
         raise HTTPException(status_code=500, detail=str(e))
-    
+
+@app.post("/start-research")
+async def start_research(request: ResearchRequest):
+    """
+    Triggers the Agentic Hierarchy (manager->scraper->strategist)
+    to generate the professional applicant guide. 
+    """
+    try:
+        """
+        Call your LangGraph kickoff. 
+        result=await admissions_crew.kickoff(inputs={
+        "message"=request.message
+        })
+        """
+        print(f"Research Started!")
+        return {"status":"success","message":"Strategy generation initiated."}
+    except Exception as e: 
+        print(f"AGENT ERROR:{str(e)}")
+        raise HTTPException(status_code=500,detail=f"Agent Failed {str(e)}")
+
+
 if __name__ == "__main__":
     uvicorn.run("app.api:app", host="127.0.0.1", port=8001, reload=True)

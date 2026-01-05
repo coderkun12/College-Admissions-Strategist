@@ -1,21 +1,18 @@
 import os
-from typing import TypedDict, Optional
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langgraph.graph import StateGraph, END
+from app.schemas import AgentState
 from dotenv import load_dotenv
 load_dotenv()
+
 """
 Defining a LLM and a API which will help the UI to have a file name based on the University name and program name. 
 LLM is tasked only to extract the university name and program name and return it as a JSON output to the ui.py file.
 """
 
-class AgentState(TypedDict):
-    user_input:str
-    university:Optional[str]
-    program:Optional[str]
-    status:str
+
 
 llm = ChatGroq(model="llama-3.1-8b-instant",
                temperature=0,
@@ -26,14 +23,22 @@ async def extraction_node(state: AgentState):
     """
     This worker only cares about finding the Uni and Program name.
     """
-    prompt=ChatPromptTemplate.from_template("Extract the university and program from this text:{text}"
-                                            "Return ONLY a JSON with 'university' and 'program' keys.")
+    prompt = ChatPromptTemplate.from_template(
+        "Extract the following from the text: university, level of study (as 'level'), "
+        "program name, and applicant background details (as 'background').\n"
+        "Text: {text}\n"
+        "Return ONLY a JSON with keys: 'university', 'program', 'level', and 'background'."
+    )
     chain=prompt|llm|JsonOutputParser()
     result=await chain.ainvoke({"text":state["user_input"]})
-    return{
-        "university":result.get("university"),
-        "program":result.get("program"),
-        "status":"extraction_complete"
+    
+    print(result)
+    return {
+        "university": result.get("university"),
+        "program": result.get("program"),
+        "level": result.get("level"),
+        "background": result.get("background"),
+        "status": "extraction_complete"
     }
 workflow=StateGraph(AgentState)
 workflow.add_node("extractor",extraction_node)
@@ -47,7 +52,7 @@ agent_app=workflow.compile()
 
 # async def test_agent():
 #     print("--- Testing Agent Extraction ---")
-#     test_input = {"user_input": "I want to apply for the Computer Science program at Stanford University."}
+#     test_input = {"user_input": "I want to apply for the Masters in Computer Science program at Stanford University. I am from India and my GPA is 3.6"}
     
 #     try:
 #         # We call the compiled agent directly
